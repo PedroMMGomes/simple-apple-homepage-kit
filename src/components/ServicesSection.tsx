@@ -5,26 +5,26 @@ import { Code, Smartphone, Globe, Zap } from "lucide-react";
 const services = [
   {
     icon: Code,
-    title: "Desenvolvimento Web",
-    description: "Aplicações web modernas e responsivas usando as tecnologias mais avançadas do mercado.",
+    title: "Chat Ai",
+    description: "Chat moderno e funcional para testar nosso chatbot.",
     gradient: "from-blue-500 to-purple-600"
   },
   {
     icon: Smartphone,
-    title: "Apps Mobile",
-    description: "Aplicativos nativos e híbridos para iOS e Android com performance excepcional.",
+    title: "Atende AI",
+    description: "Vendedor automatico para seu E-commerce.",
     gradient: "from-purple-500 to-pink-600"
   },
   {
     icon: Globe,
-    title: "Soluções Cloud",
-    description: "Arquiteturas escaláveis na nuvem para suportar o crescimento do seu negócio.",
+    title: "VPS para AI",
+    description: "Servidores privados para seus sistemas de AI. Servidores focados em GPU.",
     gradient: "from-green-500 to-blue-600"
   },
   {
     icon: Zap,
-    title: "Automação",
-    description: "Processos automatizados que aumentam a eficiência e reduzem custos operacionais.",
+    title: "Cursos",
+    description: "Cursos interativos para aprender a usar nossos serviços.",
     gradient: "from-orange-500 to-red-600"
   }
 ];

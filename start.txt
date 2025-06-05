@@ -1,0 +1,8 @@
+npm run dev                                 
+
+
+cloudflared tunnel run b4fec0ce-87c0-415d-92b4-ef4d34836d2a
+
+
+
+Rode o main.py na pasta backend

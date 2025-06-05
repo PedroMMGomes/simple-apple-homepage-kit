@@ -1,25 +1,33 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "Plataforma completa de vendas online com pagamentos integrados",
+    title: "Chat Ai",
+    description: "Plataforma completa de AI generativa.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
-    tags: ["React", "Node.js", "MongoDB"],
+    tags: ["LLM", "RAG", "Agents"],
     gradient: "from-blue-600 to-purple-700"
   },
   {
-    title: "Banking App",
-    description: "Aplicativo mobile para gerenciamento financeiro pessoal",
+    title: "Atende AI",
+    description: "Atende AI Vendedor inteligente para E-commerce.",
     image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=800&h=600&fit=crop",
-    tags: ["React Native", "TypeScript", "Firebase"],
+    tags: ["Whatsapp", "EvoApi", "N8N"],
     gradient: "from-green-600 to-blue-700"
   },
   {
-    title: "Analytics Dashboard",
-    description: "Dashboard em tempo real para análise de dados empresariais",
+    title: "Cursos",
+    description: "Cursos interativos para aprender a usar nossos serviços.",
+    image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&h=600&fit=crop",
+    tags: ["LLM", "RAG", "N8N" ],
+    gradient: "from-purple-600 to-pink-700"
+  },
+  {
+    title: "VPS para AI",
+    description: "Servidores privados para seus sistemas de AI. Servidores focados em GPU.",
     image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&h=600&fit=crop",
     tags: ["Vue.js", "Python", "PostgreSQL"],
     gradient: "from-purple-600 to-pink-700"
@@ -27,6 +35,14 @@ const projects = [
 ];
 
 const PortfolioSection = () => {
+  const navigate = useNavigate();
+
+  const projectRoutes: { [key: string]: string } = {
+    "Chat Ai": "/chatai",
+    "Atende AI": "/atendeai",
+    "Cursos": "/cursos",
+    "VPS para AI": "/vps",
+  };
   return (
     <section id="portfolio" className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-6">
@@ -43,7 +59,13 @@ const PortfolioSection = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="hover-lift border-0 shadow-xl overflow-hidden bg-white group"
+              className="hover-lift border-0 shadow-xl overflow-hidden bg-white group cursor-pointer"
+              onClick={() => {
+                const path = projectRoutes[project.title];
+                if (path) {
+                  navigate(path);
+                }
+              }}
             >
               <div className="relative overflow-hidden">
                 <img 
