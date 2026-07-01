@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="readme-hero.png" alt="hero" width="100%">
+</p>
+
 <h1 align="center">🖥️ TechStudio — Software House</h1>
 <p align="center"><strong>Site institucional de software house com backend próprio + Supabase (Vite · React · TS · Tailwind).</strong></p>
 
